@@ -1,0 +1,21 @@
+
+// reset CSS styles
+
+@use "./reset";
+
+// reset CSS styles
+
+
+// styles layout
+
+@use "./layout/leftside";
+@use "./layout/mainside";
+@use "./layout/rightside";
+
+// styles layout
+
+.App {
+  display: grid;
+  grid-template-columns: 1fr 3.5fr 1.5fr;
+}
+

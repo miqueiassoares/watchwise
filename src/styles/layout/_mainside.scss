@@ -1,0 +1,5 @@
+@use "../variables";
+
+.mainside {
+  background-color: variables.$bg-dark-main;
+}

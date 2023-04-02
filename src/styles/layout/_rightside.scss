@@ -1,0 +1,6 @@
+@use "../variables";
+
+.rightside {
+  background-color: variables.$bg-dark-sides;
+  height: 100vh;
+}
