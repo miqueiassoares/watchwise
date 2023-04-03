@@ -1,3 +1,5 @@
+@use "./variables";
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -45,4 +47,20 @@ table {
 
 * {
 	box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: variables.$bg-dark-main;
+}
+
+/* Estiliza o "thumb" da scrollbar */
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #999;
+}
+
+/* Estiliza o "thumb" da scrollbar quando está sendo arrastado */
+::-webkit-scrollbar-thumb:active {
+  background-color: variables.$blue-color;
 }

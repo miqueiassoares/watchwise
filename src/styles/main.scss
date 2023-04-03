@@ -1,4 +1,4 @@
-
+@use "./variables";
 // reset CSS styles
 
 @use "./reset";
@@ -15,7 +15,70 @@
 // styles layout
 
 .App {
-  display: grid;
-  grid-template-columns: 1fr 3.5fr 1.5fr;
+  width: 100vw;
+  display: flex;
+  overflow-x: hidden;
+  .leftside {
+    width: 15vw;
+  }
+  .mainside {
+    width: 60vw;
+  }
+  .rightside {
+    width: 25vw;
+    position: relative;
+    .closed {
+      cursor: pointer;
+      position: absolute;
+      left: -5px;
+      height: 100vh;
+      width: 5px;
+      border: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      outline: none;
+      border-radius: 0;
+      background-color: variables.$blue-color;
+      transition: .2s;
+      &:hover {
+        box-shadow: 1px 0px 7px 1px variables.$blue-color;
+      }
+      img {
+        width: 17px;
+        position: absolute;
+        right: -15px;
+        animation: tremer .3s infinite alternate;
+      }
+    }
+  }
 }
+
+@keyframes tremer {
+  from {
+    margin: 1px 1px 1px 1px;
+  }
+  to {
+    margin: -1px -1px -1px -1px;
+  }
+}
+
+.recolhido {
+  .mainside {
+    width: 84vw;
+  }
+  .rightside {
+    margin-right: -24vw;
+    .closed {
+      img {
+        transform: rotate(180deg);
+        right: 0;
+        left: -15px;
+      }
+    }
+    
+  }
+}
+
 

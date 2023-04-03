@@ -3,11 +3,11 @@
 .leftside {
   background-color: variables.$bg-dark-sides;
   height: 100vh;
-  overflow-y: scroll;
-  padding: 30px 40px;
-  padding-right: 0px;
+  overflow-y: auto;
+  padding-top: 20px;
   &__logo {
-    width: 50%;
+    margin-left: 40px;
+    width: 60%;
     img {
       width: 100%;
       height: auto;
@@ -17,33 +17,46 @@
     margin: 20px 0px;
     h1 {
       font-weight: 700;
-      font-size: 1rem;
+      font-size: .9rem;
       margin-bottom: 10px;
+      margin-left: 40px;
       color: rgba(249, 249, 249, 0.67);
     }
 
     &__list {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      
       li {
         width: 100%;
         a {
+          padding-left: 40px;
           cursor: pointer;
           display: flex;
           align-items: center;
           width: 100%;
-          height: 30px;
+          height: 35px;
           gap: 13px;
           text-decoration: none;
+          transition: background .2s;
+          &:hover {
+            background-color: variables.$bg-dark-main;
+          }
+          &:active {
+            span {
+              color: variables.$blue-color;
+            }
+          }
           img {
-            width: 22px;
+            width: 1.1rem;
           }
           span {
             color: variables.$text-color;
-            font-size: 1rem;
+            font-size: .8rem;
             font-weight: 600;
+            transition: color .2s;
           }
+
         }
       }
     }
