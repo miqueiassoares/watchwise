@@ -88,6 +88,128 @@
       }
     }
   }
+  .continue {
+    margin-top: 54px;
+    &__controls{
+      display: flex;
+      &__title {
+        font-size: 21px;
+        font-weight: 800;
+        color: variables.$text-color; 
+      }
+      &__avancar__recuar{
+        width: max-content;
+        display: flex;
+        margin-left: 17px;
+        button {
+          background: transparent;
+          border: none;
+          width: 20px;
+          height: 20px;
+          position: relative;
+        }
+        img {
+          height: 12.34px;
+        }
+        .lado-esquerdo {
+          img {
+            transform: rotate(180deg);
+            opacity: .4;
+          }
+        }
+        .lado-direito {
+          img {
+            margin-top: 3px;
+          }
+        }
+      }
+      .seemore {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        width: max-content;
+        gap: 8px;
+        margin-left: 38px;
+        span {
+          font-size: 13.22px;
+          font-weight: 600;
+          color: rgba(249, 249, 249, .67);
+        }
+        img {
+          margin-top: 3px;
+          height: 10px;
+          width: auto;
+        }
+      }
+    }
+    &__movies {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 20px;
+      overflow-x: hidden;
+      margin-top: 26px;
+      &__movie {
+        height: fit-content;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        padding: 9px;
+        background-color: #16181e;
+        border: 0.881518px solid rgba(249, 249, 249, 0.1);
+        border-radius: 10.5782px;
+        gap: 8.82px;
+        img {
+          width: 48px;
+          height: 52px;
+        }
+        .info {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          h3 {
+            font-size: 14.1px;
+            font-weight: 800;
+            color: #f9f9f9;
+          }
+          p {
+            font-size: 12.34px;
+            font-weight: 700;
+            color: rgba(249, 249, 249, .7);
+          }
+          .progresse-bar {
+            background-color: #f9f9f9;
+            width: 100%;
+            span {
+              display: block;
+              background-color: variables.$blue-color;
+              width: 80%;
+              height: 2.5px;
+            }
+          }
+        }
+        .drop {
+          padding: 11.4597px 9.6967px;
+          background: rgba(249, 249, 249, 0.2);
+          border-radius: 7.05214px;
+          color: #f9f9f9;
+          font-size: 12.3412px;
+          font-weight: 800;
+          border: none;
+          cursor: pointer;
+        }
+        .watch {
+          cursor: pointer;
+          background-color: #00b9ae;
+          border-radius: 7.05214px;
+          padding: 11.4597px 36.1422px;
+          border: none;
+          color: #16181e;
+          font-size: 12.3412px;
+          font-weight: 800;
+        }
+      }
+    }
+  }
 }
 
 @keyframes tremer {

@@ -2,6 +2,7 @@ import Arrow from "../../assets/img/rightside/arrow.png";
 import Drop from "../../assets/img/rightside/arrow-drop.svg";
 import Notification from "../../assets/img/rightside/Notification-enable.svg";
 import Avatar from "../../assets/img/rightside/user-logo.png";
+import Continue from "./rightside-components/Continue";
 
 const Rightside = ({ handleClosed }) => {
   return(
@@ -19,12 +20,7 @@ const Rightside = ({ handleClosed }) => {
           <img src={Avatar} alt="Avatar" className="rightside__user__data__avatar" />
         </div>
       </div>
-      <div className="rightside__contitnue">
-          <h2>Continue</h2>
-          <div className="bloco-avancar-recuar">
-            
-          </div>
-      </div>
+      <Continue />
     </div>
   )
 }
