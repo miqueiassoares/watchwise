@@ -89,7 +89,7 @@
     }
   }
   .continue {
-    margin-top: 54px;
+    margin-top: 60px;
     &__controls{
       display: flex;
       &__title {
@@ -210,7 +210,71 @@
       }
     }
   }
+  .toprated__series {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow: hidden;
+    width: fit-content;
+    &__serie {
+      height: 113.72px;
+      background: #16181e url("./../assets/img/rightside/filmes/supernatural.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: 0.881518px solid rgba(249, 249, 249, 0.1);
+      border-radius: 10.5782px;
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      h3 {
+        font-size: 14.1px;
+        font-weight: 800;
+        color: #f9f9f9;
+      }
+      .info {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        span {
+          display: block;
+          width: max-content;
+          font-size: 12.34px;
+          font-weight: 700;
+          color: rgba(249, 249, 249, .7);
+        }
+      }
+      .buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        button {
+          border: none;
+          cursor: pointer;
+          transition: .3s;
+          &:hover {
+            opacity: .5;
+          }
+        }
+        .add {
+          padding: 4px 10px;
+          background-color: rgba(249, 249, 249, 0.2);
+          border-radius: 7.05px;
+        }
+        .watch {
+          background-color: #00b9ae;
+          padding: 11.4597px 36.1422px;
+          border-radius: 7.05214px;
+        }
+      }
+    }
+  }
 }
+
+
+
 
 @keyframes tremer {
   from {

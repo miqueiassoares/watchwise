@@ -24,6 +24,11 @@
   .mainside {
     transition: width .3s;
     width: 60vw;
+    img {
+      width: 100%;
+      height: auto;
+      margin-top: 60px;
+    }
   }
   .rightside {
     transition: margin .3s;

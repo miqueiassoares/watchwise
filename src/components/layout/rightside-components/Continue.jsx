@@ -1,11 +1,9 @@
-import { useState } from "react";
 import ArrowWhite from "../../../assets/img/rightside/arrow-white.svg";
 import desenho from "../../../assets/img/rightside/filmes/Desenho.png";
 import WandaVision from "../../../assets/img/rightside/filmes/WandaVision.png";
 
 
 const Continue = () => {
-  const [avancar, setAvancar] = useState(true);
   return(
     <div className="continue">
       <div className="continue__controls">

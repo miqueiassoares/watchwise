@@ -3,6 +3,7 @@ import Drop from "../../assets/img/rightside/arrow-drop.svg";
 import Notification from "../../assets/img/rightside/Notification-enable.svg";
 import Avatar from "../../assets/img/rightside/user-logo.png";
 import Continue from "./rightside-components/Continue";
+import TopRated from "./rightside-components/TopRated";
 
 const Rightside = ({ handleClosed }) => {
   return(
@@ -20,7 +21,8 @@ const Rightside = ({ handleClosed }) => {
           <img src={Avatar} alt="Avatar" className="rightside__user__data__avatar" />
         </div>
       </div>
-      <Continue />
+      <Continue/>
+      <TopRated/>
     </div>
   )
 }
