@@ -9,7 +9,7 @@ const Rightside = ({ handleClosed }) => {
   return(
     <div className="rightside">
       <button onClick={handleClosed} className="closed">
-        <img src={Arrow} alt="" />
+        <img src={Arrow} alt="Open/Closed" />
       </button>
       <div className="rightside__user">
         <div className="rightside__user__notification">

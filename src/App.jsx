@@ -2,20 +2,28 @@ import Leftside from "./components/layout/Leftside";
 import Mainside from "./components/layout/Mainside";
 import Rightside from "./components/layout/Rightside";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+const useClosedOpen = () => {
+  const [side, setSide] = useState(true);
+  const closedOpen = () => {
+    setSide(!side);
+  }
+  return [side, closedOpen];
+}
 
 function App() {
-  const [rightSide, setRightSide] = useState(true);
-
-  const closedOpen = () => {
-    setRightSide(!rightSide);
-  }
-
+  const [rightSide, setRightSide] = useClosedOpen();
+  const [leftSide, setLeftSide] = useClosedOpen();
+  
+  window.addEventListener("resize", () => {
+    if(window.innerWidth < 800) setRightSide(false);
+  });
   return (
-    <div className={`App ${!rightSide ? "recolhido" : ""}`}>
-      <Leftside />
-      <Mainside />
-      <Rightside handleClosed={closedOpen} />
+    <div className={`App ${!leftSide ? "leftrecolhido" : ""}  ${!rightSide ? "rightrecolhido" : ""}`}>
+      <Leftside  handleClosed={setLeftSide}/>
+      <Mainside/>
+      <Rightside handleClosed= {setRightSide} />
     </div>
   )
 }

@@ -20,15 +20,13 @@
   overflow-x: hidden;
   .leftside {
     width: 15vw;
+    margin-left: 0;
+    transition: margin .3s;
+    position: relative;
   }
   .mainside {
     transition: width .3s;
     width: 60vw;
-    img {
-      width: 100%;
-      height: auto;
-      margin-top: 60px;
-    }
   }
   .rightside {
     transition: margin .3s;
@@ -38,7 +36,7 @@
   }
 }
 
-.recolhido {
+.rightrecolhido {
   .mainside {
     width: 84vw;
   }
@@ -47,8 +45,24 @@
     .closed {
       img {
         transform: rotate(180deg);
-        right: 0;
-        left: -15px;
+        left: -19px;
+      }
+    }
+  }
+}
+
+.leftrecolhido {
+  .mainside {
+    width: 74vw;
+  }
+  .leftside {
+    margin-left: -14vw;
+    overflow: visible;
+    .closed {
+      img {
+        transform: rotate(0deg);
+
+        left: 10px;
       }
     }
   }
