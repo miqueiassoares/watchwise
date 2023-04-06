@@ -6,22 +6,42 @@ import { useState, useEffect } from "react";
 
 const useClosedOpen = () => {
   const [side, setSide] = useState(true);
-  const closedOpen = () => {
-    setSide(!side);
+  const closedOpen = (valor) => {
+    if (valor.target) {
+      setSide(!side);
+      console.log(side);
+      return;
+    }
+    setSide(valor);
   }
   return [side, closedOpen];
 }
 
-function App() {
+
+
+const App = () => {
   const [rightSide, setRightSide] = useClosedOpen();
   const [leftSide, setLeftSide] = useClosedOpen();
-  
+  const [width, setWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    if(width <= 800) {
+      setLeftSide(false);
+      setRightSide(false);
+    }
+  }, []);
   window.addEventListener("resize", () => {
-    if(window.innerWidth < 800) setRightSide(false);
+    setWidth(window.innerWidth);
+    if (width <= 800) {
+      setLeftSide(false);
+      setRightSide(false);
+    } else {
+      setLeftSide(true);
+      setRightSide(true);
+    }
   });
   return (
     <div className={`App ${!leftSide ? "leftrecolhido" : ""}  ${!rightSide ? "rightrecolhido" : ""}`}>
-      <Leftside  handleClosed={setLeftSide}/>
+      <Leftside  handleClosed={setLeftSide} />
       <Mainside/>
       <Rightside handleClosed= {setRightSide} />
     </div>
