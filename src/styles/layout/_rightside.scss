@@ -3,12 +3,14 @@
 .rightside {
   background-color: variables.$bg-dark-sides;
   height: 100vh;
+  min-height:  500px;
   padding-left: 30px;
   .closed {
     cursor: pointer;
     position: absolute;
-    left: -5px;
+    left: 0px;
     height: 100vh;
+    min-height:  500px;
     width: 5px;
     border: none;
     padding: 0;
@@ -25,7 +27,7 @@
     img {
       width: 17px !important;
       position: absolute;
-      left: 10px;
+      left: 8px;
       animation: tremer .3s infinite alternate;
     }
   }

@@ -3,15 +3,15 @@
 .leftside {
   background-color: variables.$bg-dark-sides;
   height: 100vh;
+  min-height:  500px;
   padding-top: 20px;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1.5fr 1fr;
-  overflow: hidden;
   .closed {
     cursor: pointer;
     position: absolute;
     right: 0;
+    top: 0;
     height: 100vh;
+    min-height:  500px;
     width: 5px;
     border: none;
     padding: 0;
@@ -34,7 +34,7 @@
       width: 17px !important;
       position: absolute;
       transform: rotate(180deg);
-      left: -19px;
+      left: -18px;
       animation: tremer .3s infinite alternate;
     }
   }
@@ -45,15 +45,25 @@
       width: 100%;
       height: auto;
     }
+    @media screen and (max-width: 935px) {
+      margin-left: 5px;
+      width: 80%;
+    }
   }
   &__navigation {
-    margin: 10px 0px;
+    margin: 0px;
+    width: 100%;
+    overflow: hidden;
     h1 {
       font-weight: 700;
       font-size: .8rem;
+      margin-top: 20px;
       margin-bottom: 10px;
-      margin-left: 40px;
       color: rgba(249, 249, 249, 0.67);
+      padding-left: 40px;
+      @media screen and (max-width: 935px) {
+        padding-left: 5px;
+      }
     }
 
     &__list {
@@ -72,6 +82,9 @@
           gap: 13px;
           text-decoration: none;
           transition: background .2s;
+          @media screen and (max-width: 935px) {
+            padding-left: 5px;
+          }
           &:hover {
             background-color: variables.$bg-dark-main;
           }
@@ -93,5 +106,6 @@
         }
       }
     }
+    
   }
 }

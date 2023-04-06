@@ -15,8 +15,10 @@
 // styles layout
 
 .App {
-  width: 100vw;
+  width: auto;
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   overflow-x: hidden;
   .leftside {
     width: 15vw;
@@ -36,34 +38,122 @@
   }
 }
 
-.rightrecolhido {
+
+.rightrecolhidoFull {
   .mainside {
-    width: 100%;
+    width: 84vw;
   }
   .rightside {
     margin-right: -24vw;
     .closed {
       img {
         transform: rotate(180deg);
-        left: -19px;
+        left: -18px;
       }
     }
   }
 }
 
-.leftrecolhido {
+.leftAberto {
   .mainside {
-    width: 100%;
+    width: 84vw;
+  }
+  .leftside {
+    margin-left: 0;
+  }
+  .rightside {
+    margin-right: -24vw;
+    .closed {
+      img {
+        transform: rotate(180deg);
+        left: -18px;
+      }
+    }
+  }
+}
+
+.rightAberto {
+  .mainside {
+    width: 74vw;
   }
   .leftside {
     margin-left: -14vw;
-    overflow: visible;
     .closed {
       img {
         transform: rotate(0deg);
-
-        left: 10px;
+        left: 8px;
+      }
+    }
+  }
+  .rightside {
+    margin-right: 0;
+    .closed {
+      img {
+        transform: rotate(0deg);
+        left: 8px;
       }
     }
   }
 }
+
+.twoSides {
+  .mainside {
+    width: 98vw;
+  }
+  .rightside {
+    margin-right: -24vw;
+    .closed {
+      img {
+        transform: rotate(180deg);
+        left: -18px;
+      }
+    }
+  }
+  .leftside {
+    margin-left: -14vw;
+    .closed {
+      img {
+        transform: rotate(0deg);
+        left: 8px;
+      }
+    }
+  }
+}
+
+
+// .rightrecolhido {
+//   .rightside {
+//     margin-right: -24vw;
+//     .closed {
+//       img {
+//         transform: rotate(180deg);
+//         left: -19px;
+//       }
+//     }
+//   }
+// }
+
+// .leftrecolhido {
+//   .mainside {
+//     width: 84vw;
+//   }
+//   .leftside {
+//     margin-left: -14vw;
+//     overflow: visible;
+//     .closed {
+//       img {
+//         transform: rotate(0deg);
+//         left: 10px;
+//       }
+//     }
+//   }
+// }
+
+// .twoSides {
+//   .mainside {
+//     width: 98vw;
+//   }
+//   .leftside {
+    
+//   }
+// }
