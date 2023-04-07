@@ -4,7 +4,13 @@
   background-color: variables.$bg-dark-sides;
   height: auto;
   min-height:  100vh;
-  padding-left: 30px;
+  padding-left: 1vw;
+  @media screen and (max-width: 800px) {
+    padding-left: 40px;
+  }
+  @media screen and (max-width: 400px) {
+    display: none;
+  }
   .closed {
     cursor: pointer;
     position: absolute;
@@ -107,12 +113,13 @@
     }
   }
   .continue {
-    margin-top: 60px;
+    margin-top: 4vw;
     &__controls{
       display: flex;
       flex-direction: row;
       align-items: baseline;
       justify-content: space-between;
+      flex-wrap: wrap;
       &__title {
         font-size: 1.5vw;
         font-weight: 800;
@@ -161,7 +168,8 @@
           font-weight: 600;
           color: rgba(249, 249, 249, .67);
           @media screen and (max-width: 800px) {
-           font-size: 1rem; 
+            font-size: 1rem; 
+            white-space: nowrap;
           }
         }
         img {
@@ -177,7 +185,7 @@
       flex-wrap: nowrap;
       gap: 20px;
       overflow-x: hidden;
-      margin-top: 26px;
+      margin-top: 2vw;
       &__movie {
         height: fit-content;
         display: grid;
@@ -218,12 +226,15 @@
           }
           .progresse-bar {
             background-color: #f9f9f9;
-            width: 100%;
+            width: 8vw;
+            min-width: 120px;
+          
             span {
               display: block;
               background-color: variables.$blue-color;
               width: 80%;
               height: .2vw;
+              min-height: 2px;
             }
           }
         }
@@ -257,13 +268,12 @@
     }
   }
   .toprated__series {
-    margin-top: 25px;
+    margin-top: 2vw;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 1.2vw;
     overflow: hidden;
-    width: fit-content;
     &__serie {
       height: 7.5vw;
       min-height: 100px; 
@@ -278,6 +288,7 @@
       justify-content: space-between;
       @media screen and (max-width: 800px) {
         padding: 8px;
+
       }
       h3 {
         font-size: 1vw;
@@ -318,15 +329,24 @@
           }
         }
         .add {
-          padding: .4vw .8vw;
+          
           background-color: rgba(249, 249, 249, 0.2);
           border-radius: 7.05px;
+          img {
+            width: 2vw;
+            min-width: 30px;
+          }
         }
         .watch {
           background-color: #00b9ae;
-          padding: 11.4597px 36.1422px;
+          padding: .4vw 3vw;
           border-radius: 7.05214px;
           font-weight: bold;
+          font-size: .8vw;
+          @media screen and (max-width: 800px) {
+            padding: .5rem 2rem;
+            font-size: .8rem;
+          }
         }
       }
     }

@@ -51,7 +51,9 @@ const App = () => {
         setClassName("");
       }
     } else if (width <= 800) {
-      if (rightSide) {
+      if (width <= 400) {
+        setRightSide(false);
+      } else if (rightSide) {
         setLeftSide(false);
         setClassName("rightAberto");
       } else if (!rightSide && !leftSide) {

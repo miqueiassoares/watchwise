@@ -72,6 +72,14 @@
       }
     }
   }
+  @media screen and (max-width: 400px) {
+    .mainside {
+      width: 50vw;
+    }
+    .rightside {
+      margin-left: -50vw;
+    }
+  }
 }
 
 .rightAberto {
@@ -122,6 +130,14 @@
         transform: rotate(0deg);
         left: 8px;
       }
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .mainside {
+      width: 98vw;
+    }
+    .rightside {
+      margin-right: -50vw;
     }
   }
 }
