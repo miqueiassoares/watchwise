@@ -6,16 +6,17 @@
   min-height:  100vh;
   display: flex;
   flex-direction: column;
-  gap: 2vw;
+  justify-content: space-around;
   @media screen and (max-width: 800px) {
-    gap: 5vw;     
+    justify-content: flex-start;
+    gap: 5vw;
   }
   .closed {
     cursor: pointer;
     position: absolute;
     right: 0;
     top: 0;
-    height: auto;
+    height: 100%;
     min-height: 100vh;
     width: .3vw;
     min-width: 5px;
@@ -46,16 +47,17 @@
   }
   &__logo {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     width: 100%;
-    padding-top: 2vw;
+    padding-top: 10px;
+
     img {
       width: 60%;
       height: auto;
     }
     @media screen and (max-width: 935px) {
-      margin-left: 5px;
-      width: 80%;
+      
     }
   }
   &__navigation {
@@ -96,18 +98,11 @@
             padding-top: 1vw;
             padding-bottom: 1vw;
           }
-          &:hover {
-            background-color: variables.$bg-dark-main;
-          }
-          &:active {
-            span {
-              color: variables.$blue-color;
-            }
-          }
           img {
             width: 1.3vw;
             @media screen and (max-width: 800px) {
               width: 6%;
+              min-width: 15px;
             }
           }
           span {
@@ -120,7 +115,15 @@
               
             }
           }
-
+          &:hover {
+            background-color: variables.$bg-dark-main;
+          }
+          &:active {
+            span {
+              color: variables.$blue-color;
+            }
+          }
+          
         }
       }
     }
