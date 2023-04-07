@@ -56,13 +56,15 @@
 
 .leftAberto {
   .mainside {
-    width: 84vw;
+    width: 48vw;
   }
   .leftside {
     margin-left: 0;
+    width: 50vw;
   }
   .rightside {
-    margin-right: -24vw;
+    width: 50vw;
+    margin-right: -48vw;
     .closed {
       img {
         transform: rotate(180deg);
@@ -74,10 +76,11 @@
 
 .rightAberto {
   .mainside {
-    width: 74vw;
+    width: 48vw;
   }
   .leftside {
-    margin-left: -14vw;
+    width: 50vw;
+    margin-left: -48vw;
     .closed {
       img {
         transform: rotate(0deg);
@@ -86,6 +89,7 @@
     }
   }
   .rightside {
+    width: 50vw;
     margin-right: 0;
     .closed {
       img {
@@ -98,10 +102,11 @@
 
 .twoSides {
   .mainside {
-    width: 98vw;
+    width: 96vw;
   }
   .rightside {
-    margin-right: -24vw;
+    width: 50vw;
+    margin-right: -48vw;
     .closed {
       img {
         transform: rotate(180deg);
@@ -110,7 +115,8 @@
     }
   }
   .leftside {
-    margin-left: -14vw;
+    width: 50vw;
+    margin-left: -48vw;
     .closed {
       img {
         transform: rotate(0deg);

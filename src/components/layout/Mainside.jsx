@@ -1,6 +1,6 @@
-const Mainside = () => {
+const Mainside = ({ handleOnClick }) => {
   return(
-    <div className="mainside">
+    <div className="mainside" onClick={handleOnClick}>
     </div>
   )
 }

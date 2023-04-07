@@ -60,10 +60,17 @@ const App = () => {
     }
   }, [leftSide, rightSide, width]);
 
+  function clickMain() {
+    if (width <= 800) {
+      setLeftSide(false);
+      setRightSide(false);
+    }
+  }
+
   return (
     <div className={`App ${className}`}>
       <Leftside handleClosed={setLeftSide} />
-      <Mainside />
+      <Mainside handleOnClick={clickMain} />
       <Rightside handleClosed={setRightSide} />
     </div>
   );
