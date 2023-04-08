@@ -113,7 +113,10 @@
     }
   }
   .continue {
-    margin-top: 4vw;
+    margin-top: 2vw;
+    @media screen and (max-width: 800px) {
+      margin-top: 6vw;
+    }
     &__controls{
       display: flex;
       flex-direction: row;
@@ -186,6 +189,9 @@
       gap: 20px;
       overflow-x: hidden;
       margin-top: 2vw;
+      @media screen and (max-width: 800px) {
+        margin-top: 6vw;
+      }
       &__movie {
         height: fit-content;
         display: grid;
