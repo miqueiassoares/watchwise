@@ -10,16 +10,21 @@ import watchlistIcon from "../../../assets/img/leftside/library/Watchlist.svg";
 import completedIcon from "../../../assets/img/leftside/library/Completed.svg";
 import settingsIcon from "../../../assets/img/leftside/general/Settings.svg";
 import logOutIcon from "../../../assets/img/leftside/general/LogOut.svg";
+import { Link, useLocation } from "react-router-dom";
 
 
 const Navigation = ({ title, itens }) => {
+  const pathname = useLocation().pathname;
+
   return (
     <div className="leftside__navigation">
       <h1>{title}</h1>
       <ul className="leftside__navigation__list">
-        {itens.map((item, index) => (
+        {itens.map((item, index) => {
+          const path = `/${item.toLowerCase().replace(/\s+/g, '')}`;
+          return (
           <li key={index}>
-            <a href="">
+            <Link to={path} className={pathname === path ? "active" : ""} >
               <img
                 className="leftside__navigation__icon"
                 src={
@@ -36,9 +41,9 @@ const Navigation = ({ title, itens }) => {
                 item === "Settings" ? settingsIcon : logOutIcon
               } alt={item} />
               <span>{item}</span>
-            </a>
+            </Link>
           </li>
-        ))
+        )})
         }
       </ul>
     </div>

@@ -84,6 +84,12 @@
       
       li {
         width: 100%;
+        .active {
+          background-color: variables.$bg-dark-main;
+          span {
+            color: variables.$blue-color;
+          }
+        }
         a {
           padding-top: .6vw;
           padding-bottom: .6vw;
@@ -135,3 +141,4 @@
     
   }
 }
+
