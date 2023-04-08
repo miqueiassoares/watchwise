@@ -86,6 +86,7 @@
         width: 100%;
         .active {
           background-color: variables.$bg-dark-main;
+          border-right: 3px solid variables.$blue-color ;
           span {
             color: variables.$blue-color;
           }
