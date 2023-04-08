@@ -4,7 +4,7 @@
   background-color: variables.$bg-dark-sides;
   height: auto;
   min-height:  100vh;
-  padding-left: 1vw;
+  padding-left: 3vw;
   @media screen and (max-width: 800px) {
     padding-left: 40px;
   }
@@ -32,7 +32,9 @@
       box-shadow: 1px 0px 7px 1px variables.$blue-color;
     }
     img {
-      width: 17px !important;
+      width: 1vw ;
+      min-width: 17px;
+
       position: absolute;
       left: 8px;
       animation: tremer .3s infinite alternate;
@@ -113,7 +115,7 @@
     }
   }
   .continue {
-    margin-top: 2vw;
+    margin-top: 4vw;
     @media screen and (max-width: 800px) {
       margin-top: 6vw;
     }
@@ -124,7 +126,7 @@
       justify-content: space-between;
       flex-wrap: wrap;
       &__title {
-        font-size: 1.5vw;
+        font-size: 1.6vw;
         font-weight: 800;
         color: variables.$text-color; 
         @media screen and (max-width: 800px) {
@@ -167,7 +169,7 @@
         margin-right: 2vw;
         cursor: pointer;
         span {
-          font-size: .9vw;
+          font-size: 1.2vw;
           font-weight: 600;
           color: rgba(249, 249, 249, .67);
           @media screen and (max-width: 800px) {
@@ -176,9 +178,9 @@
           }
         }
         img {
-          height: .6vw;
-          min-height: 10px;
-          width: auto;
+          width: .6vw;
+          min-width: 10px;
+          height: auto;
         }
       }
     }
@@ -186,29 +188,33 @@
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-      gap: 20px;
+      gap: 2vw;
       overflow-x: hidden;
       margin-top: 2vw;
       @media screen and (max-width: 800px) {
         margin-top: 6vw;
       }
       &__movie {
-        height: fit-content;
+        
+        width: 700px;
+        background-color: red;
         display: grid;
         grid-template-columns: 1fr 2fr;
-        padding: 9px;
+        padding: .6vw;
         background-color: #16181e;
         border: .1vw solid rgba(249, 249, 249, 0.1);
-        border-radius: 10.5782px;
+        border-radius: .7vw;
         gap: .6vw;
+        @media screen and (max-width: 800px) {
+          border-radius: 10px;
+          gap: 10px;
+          padding: 10px;
+        }
         img {
           width: 4vw;
-          min-width: 60px;
+          min-width: 70px;
           height: 4vw;
-          min-height: 60px;
-          @media screen and (max-width: 800px) {
-            
-          }
+          min-height: 70px;
         }
         .info {
           display: flex;
@@ -219,7 +225,7 @@
             font-weight: 800;
             color: #f9f9f9;
             @media screen and (max-width: 800px) {
-              font-size: 1rem;
+              font-size: 1.1rem;
             }
           }
           p {
@@ -245,29 +251,29 @@
           }
         }
         .drop {
-          padding: 11.4597px 9.6967px;
+          padding: .7vw .8vw;
           background: rgba(249, 249, 249, 0.2);
-          border-radius: 7.05214px;
+          border-radius: .5vw;
           color: #f9f9f9;
           font-size: .75vw;
           font-weight: 800;
           border: none;
           cursor: pointer;
           @media screen and (max-width: 800px) {
-            font-size: .7rem;
+            font-size: 1rem;
           }
         }
         .watch {
           cursor: pointer;
           background-color: #00b9ae;
-          border-radius: 7.05214px;
-          padding: 11.4597px 36.1422px;
+          border-radius: .5vw;
+          
           border: none;
           color: #16181e;
           font-size: .75vw;
           font-weight: 800;
           @media screen and (max-width: 800px) {
-            font-size: .7rem;
+            font-size: 1rem;
           }
         }
       }
@@ -278,26 +284,27 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 1.2vw;
+    gap: 2vw;
     overflow: hidden;
     &__serie {
-      height: 7.5vw;
-      min-height: 100px; 
+      min-height: 100px;
       background: #16181e url("./../assets/img/rightside/filmes/supernatural.png");
       background-repeat: no-repeat;
       background-size: cover;
       border: .1vw solid rgba(249, 249, 249, 0.1);
-      border-radius: 10.5782px;
+      border-radius: 1vw;
       padding: .7vw;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      gap: 1.5vw;
       @media screen and (max-width: 800px) {
         padding: 8px;
+        border-radius: 10px;
 
       }
       h3 {
-        font-size: 1vw;
+        font-size: 1.3vw;
         font-weight: 800;
         color: #f9f9f9;
         @media screen and (max-width: 800px) {
@@ -308,13 +315,11 @@
         display: flex;
         justify-content: space-between;
         flex-direction: row;
-        @media screen and (max-width: 800px) {
-          gap: 10px;
-        }
+        
         span {
           display: block;
           width: max-content;
-          font-size: .8vw;
+          font-size: .9vw;
           font-weight: 700;
           color: rgba(249, 249, 249, .7);
           @media screen and (max-width: 800px) {
@@ -325,19 +330,19 @@
       .buttons {
         display: flex;
         flex-direction: row;
-        gap: .7vw;
+        gap: .6vw;
         button {
           border: none;
           cursor: pointer;
           transition: .3s;
+          border-radius: .4vw;
           &:hover {
             opacity: .5;
           }
         }
         .add {
-          
+          padding: .2vw .8vw;
           background-color: rgba(249, 249, 249, 0.2);
-          border-radius: 7.05px;
           img {
             width: 2vw;
             min-width: 30px;
@@ -346,7 +351,6 @@
         .watch {
           background-color: #00b9ae;
           padding: .4vw 3vw;
-          border-radius: 7.05214px;
           font-weight: bold;
           font-size: .8vw;
           @media screen and (max-width: 800px) {
