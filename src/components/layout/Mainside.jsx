@@ -18,7 +18,7 @@ const Mainside = ({ handleOnClick }) => {
         <Route  path={"/home"} element={<Home/>} />
       </Routes>
     </div>
-  )
+  );
 }
 
 export default Mainside;

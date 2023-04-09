@@ -56,9 +56,6 @@
       width: 60%;
       height: auto;
     }
-    @media screen and (max-width: 935px) {
-      
-    }
   }
   &__navigation {
     margin: 0px;
@@ -71,10 +68,8 @@
       color: rgba(249, 249, 249, 0.67);
       padding-left: 2.5vw;
       @media screen and (max-width: 800px) {
-        padding: 0;
-        text-align: center;
-        font-size: 5vw;
-        margin-bottom: 5vw;
+        font-size: 1.5rem;
+        
       }
     }
 
@@ -104,11 +99,8 @@
           text-decoration: none;
           transition: background .2s;
           @media screen and (max-width: 800px) {
-            padding-top: 1vw;
-            padding-bottom: 1vw;
-            padding-left: 25%;
-            padding-right: 0;
-            
+            gap: 20px;
+            padding: 20px;
           }
           img {
             width: 1.3vw;
@@ -123,8 +115,7 @@
             font-weight: 600;
             transition: color .2s;
             @media screen and (max-width: 800px) {
-              font-size: 4vw;
-              
+              font-size: 1.2rem;
             }
           }
           &:hover {
