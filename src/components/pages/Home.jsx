@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 import search from "../../assets/img/mainside/home/Search.svg";
 import filter from "../../assets/img/mainside/home/Filter.svg";
+import TvShows from "./home/TvShows";
 
 const Home = () => {
   return (
@@ -20,7 +21,7 @@ const Home = () => {
             </li>
           </ul>
         </nav>
-        <form>
+        <form autoComplete="off">
           <label htmlFor="Search">
             <img src={search} alt="Search" />
           </label>
@@ -30,6 +31,7 @@ const Home = () => {
           </button>
         </form>
       </header>
+      <TvShows />
     </div>
   );
 }

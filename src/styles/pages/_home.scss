@@ -4,33 +4,48 @@
   height: 100%;
   width: 100%;
   padding: 2.5vw 4vw;
+  @media screen and (max-width: 800px) {
+    padding: 3rem 4rem;
+  }
   header {
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 10px;
+    @media screen and (max-width: 800px) {
+      flex-wrap: wrap;
+    }
     nav {
-      @media screen and (max-width: 800px) {
-        margin: auto;
-        margin-bottom: 30px;
-      }
       ul {
         display: flex;
-        gap: 4rem;
+        flex-direction: row;
+        gap: 3.5vw;
+        @media screen and (max-width: 800px) {
+          gap: 6vw;
+          margin: auto;
+        }
+
+        @media screen and (max-width: 500px) {
+          margin-bottom: 2rem;
+        }
         li {
           a {
             text-decoration: none;
             color: variables.$text-color;
             font-weight: 600;
-            font-size: 2rem;
+            font-size: 1.6vw;
+            @media screen and (max-width: 800px) {
+              font-size: 4vw;
+            }
           }
           .active {
             color: variables.$blue-color;
-            padding-bottom: .5rem;
-            border-bottom: .2rem solid variables.$blue-color;
+            padding-bottom: .5vw;
+            border-bottom: .2vw solid variables.$blue-color;
+            @media screen and (max-width: 800px) {
+              border-bottom: .3rem solid variables.$blue-color;
+            }
           }
         }
       }
@@ -40,27 +55,58 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      padding: 0 2rem;
-      border-radius: 1rem;
-      gap: 1rem;
+      padding: 0 2vw;
+      border-radius: 1vw;
+      gap: 1vw;
+      cursor: pointer;
       @media screen and (max-width: 800px) {
-        margin: auto;
+        padding: 2vw 3vw;
+        transform: scale(1.4);
       }
       label {
         img {
-          width: 1.6rem;
+          width: 1.5vw;
           height: auto;
+          cursor: pointer;
         }
       }
-
+      @media screen and (max-width: 800px) {
+        label {
+          img {
+            background-color: #21242D;
+            width: auto;
+            height: auto;
+          }
+        }
+        input {
+          display: none;
+        }
+        button {
+          display: none;
+        }
+      }
+      
+      @media screen and (max-width: 500px) {
+        margin: auto;
+        input {
+          display: block;
+          font-size: 1rem !important;
+        }
+        button {
+          display: block;
+          img {
+            width: 1rem !important;
+            height: auto;
+          }
+        }
+      }
       input {
         background-color: transparent;
         border: none;
         color: rgba(249, 249, 249, 0.67);
         font-weight: 500;
-        font-size: 1.3rem;
-        width: 16rem;
-        padding: 1.3rem 0;
+        font-size: 1.2vw;
+        padding: 1vw 0;
         &:focus {
           outline: none;
 
@@ -69,6 +115,10 @@
       button {
         background-color: transparent;
         border: none;
+        cursor: pointer;
+        img {
+          width: 1.2vw;
+        }
       }
     }
   }
