@@ -17,17 +17,19 @@
       flex-wrap: wrap;
     }
     nav {
+      @media screen and (max-width: 600px) {
+        margin: auto;
+      }
       ul {
         display: flex;
         flex-direction: row;
         gap: 3.5vw;
         @media screen and (max-width: 800px) {
-          gap: 6vw;
-          margin: auto;
+          gap: 6vw;    
         }
 
-        @media screen and (max-width: 500px) {
-          margin-bottom: 2rem;
+        @media screen and (max-width: 600px) {
+          margin-bottom: 3rem;
         }
         li {
           a {
@@ -35,8 +37,10 @@
             color: variables.$text-color;
             font-weight: 600;
             font-size: 1.6vw;
+            
             @media screen and (max-width: 800px) {
               font-size: 4vw;
+              white-space: nowrap;
             }
           }
           .active {
@@ -86,7 +90,7 @@
         }
       }
       
-      @media screen and (max-width: 500px) {
+      @media screen and (max-width: 600px) {
         margin: auto;
         input {
           display: block;
