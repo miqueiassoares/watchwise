@@ -1,0 +1,75 @@
+@use "../variables";
+
+.home {
+  height: 100%;
+  width: 100%;
+  padding: 2.5vw 4vw;
+  header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    nav {
+      @media screen and (max-width: 800px) {
+        margin: auto;
+        margin-bottom: 30px;
+      }
+      ul {
+        display: flex;
+        gap: 4rem;
+        li {
+          a {
+            text-decoration: none;
+            color: variables.$text-color;
+            font-weight: 600;
+            font-size: 2rem;
+          }
+          .active {
+            color: variables.$blue-color;
+            padding-bottom: .5rem;
+            border-bottom: .2rem solid variables.$blue-color;
+          }
+        }
+      }
+    }
+    form {
+      background-color: #21242D;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0 2rem;
+      border-radius: 1rem;
+      gap: 1rem;
+      @media screen and (max-width: 800px) {
+        margin: auto;
+      }
+      label {
+        img {
+          width: 1.6rem;
+          height: auto;
+        }
+      }
+
+      input {
+        background-color: transparent;
+        border: none;
+        color: rgba(249, 249, 249, 0.67);
+        font-weight: 500;
+        font-size: 1.3rem;
+        width: 16rem;
+        padding: 1.3rem 0;
+        &:focus {
+          outline: none;
+
+        }
+      }
+      button {
+        background-color: transparent;
+        border: none;
+      }
+    }
+  }
+}
