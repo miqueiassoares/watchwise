@@ -27,6 +27,7 @@
   flex-wrap: nowrap;
   overflow-x: hidden;
   .leftside {
+    z-index: 2;
     width: 15vw;
     margin-left: 0;
     transition: margin .3s;
@@ -35,8 +36,10 @@
   .mainside {
     transition: width .3s;
     width: 60vw;
+    z-index: 1;
   }
   .rightside {
+    z-index: 2;
     transition: margin .3s;
     width: 25vw;
     position: relative;
