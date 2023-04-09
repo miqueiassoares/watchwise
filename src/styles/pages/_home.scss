@@ -62,6 +62,7 @@
       padding: 0 2vw;
       border-radius: 1vw;
       gap: 1vw;
+      border: .1vw solid rgba(249, 249, 249, 0.1);
       cursor: pointer;
       @media screen and (max-width: 800px) {
         padding: 2vw 3vw;
