@@ -2,23 +2,24 @@
 
 .leftside {
   background-color: variables.$bg-dark-sides;
-  height: auto;
-  min-height:  100vh;
+  position: fixed;
+  top: 0;
+  left: 0;  
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   border-right: .2vw solid rgba(249, 249, 249, 0.1);
   @media screen and (max-width: 800px) {
-    justify-content: flex-start;
     gap: 5vw;
   }
   .closed {
     cursor: pointer;
     position: absolute;
-    right: 0;
+    right: -2px;
     top: 0;
-    height: 100%;
     min-height: 100vh;
+    height: 100%;
     width: .3vw;
     min-width: 5px;
     border: none;
@@ -52,7 +53,6 @@
     justify-content: center;
     width: 100%;
     padding-top: 10px;
-
     img {
       width: 60%;
       height: auto;
@@ -61,7 +61,6 @@
   &__navigation {
     margin: 0px;
     width: 100%;
-    overflow: hidden;
     h1 {
       font-weight: 700;
       font-size: 1vw;

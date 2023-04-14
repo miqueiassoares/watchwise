@@ -5,9 +5,6 @@ import Arrow from "../../assets/img/rightside/arrow.png";
 const Leftside = ({ handleClosed }) => {
   return(
     <div className="leftside">
-      <button onClick={handleClosed} className="closed">
-        <img src={Arrow} alt="Open/Closed" />
-      </button>
       <div className="leftside__logo">
         <img src={logo} alt="WatchWise" />
       </div>
@@ -23,7 +20,9 @@ const Leftside = ({ handleClosed }) => {
         title="General"
         itens={["Settings", "Log Out"]}
       />
-    
+    <button onClick={handleClosed} className="closed">
+        <img src={Arrow} alt="Open/Closed" />
+      </button>
     </div>
   )
 }

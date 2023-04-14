@@ -27,6 +27,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
+	background-color: variables.$bg-dark-main;
 	line-height: 1;
 }
 ol, ul {
