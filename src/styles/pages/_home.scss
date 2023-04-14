@@ -13,6 +13,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 3vw;
     @media screen and (max-width: 800px) {
       flex-wrap: wrap;
     }
@@ -123,6 +124,36 @@
         cursor: pointer;
         img {
           width: 1.2vw;
+        }
+      }
+    }
+  }
+
+  &__tvshows {
+    width: 100%;
+    &__slider {
+      background-color: azure;
+      width: 100%;
+      height: 21em;
+    }
+    &__popularmovies {
+      margin-top: 2vw;
+      width: 100%;
+      &__title {
+        color: azure;
+      }
+      .container__movie {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 3vw;
+        margin-top: 3vw;
+        .movie {
+          width: 33.33%;
+          height: 20vw;
+          background-color: azure;
         }
       }
     }
