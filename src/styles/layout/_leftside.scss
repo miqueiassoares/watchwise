@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   padding-top: 2rem;
-  gap: 5rem;
+  gap: 3vw;
   overflow-y: auto;
   border-right: .2vw solid rgba(249, 249, 249, 0.1);
   position: fixed;
@@ -17,11 +17,11 @@
   }
   .closed {
     cursor: pointer;
-    position: absolute;
-    right: -2px;
+    position: fixed;
+    left: 0;
     top: 0;
-    min-height: 100vh;
-    height: 100%;
+    z-index: 3;
+    height: 100vh;
     width: .3vw;
     min-width: 8px;
     border: none;
@@ -33,6 +33,7 @@
     border-radius: 0;
     background-color: variables.$blue-color;
     transition: .2s;
+    transition: margin .3s;
     @media only screen and (max-width: 800px) {
       & {
         display: flex;
@@ -138,5 +139,5 @@
 .container__navigate {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2vw;
 }

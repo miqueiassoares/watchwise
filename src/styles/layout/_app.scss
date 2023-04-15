@@ -40,7 +40,6 @@
       }
       .mainside {
         width: 100vw;
-        min-height: 100vh;
         height: auto;
       }
     }
@@ -69,6 +68,9 @@
 .leftAberto {
   .leftside {
     margin-left: 0;
+    .closed {
+      margin-left: 48.9vw;
+    }
   }
   .rightside {
     margin-right: -47vw;
@@ -85,6 +87,9 @@
     }
     .leftside {
       width: 80vw;
+      .closed {
+        margin-left: 80vw;
+      }
     } 
   }
 }
@@ -93,6 +98,7 @@
   .leftside {
     margin-left: -47vw;
     .closed {
+      margin-left: 2.9vw;
       img {
         transform: rotate(0deg);
         left: 8px;
@@ -122,7 +128,9 @@
   }
   .leftside {
     margin-left: -47vw;
+    width: 50vw;
     .closed {
+      margin-left: 2.9vw;
       img {
         transform: rotate(0deg);
         left: 8px;
@@ -131,7 +139,11 @@
   }
   @media screen and (max-width: 400px) {
     .leftside {
-      margin-left: -44vw;
+      width: 80vw;
+      margin-left: -76vw;
+      .closed {
+        margin-left: 2vw;
+      }
     }
   }
 }
