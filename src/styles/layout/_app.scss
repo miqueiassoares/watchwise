@@ -1,0 +1,137 @@
+@use "../variables";
+
+
+
+
+.App {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  float: right;
+  z-index: 0;
+  .leftside {
+    z-index: 2;
+    width: 15vw;
+    transition: margin .3s;
+  }
+  .mainside {
+    transition: width .3s;
+    width: 60vw;
+    z-index: 1;
+  }
+  .rightside {
+    z-index: 2;
+    transition: margin .3s;
+    width: 25vw;
+  }
+  @media screen and (max-width: 800px) {
+    & {
+      float: none;
+      .leftside {
+        width: 50vw;
+      }
+      .rightside {
+        width: 50vw;
+      }
+      .mainside {
+        width: 100vw;
+        min-height: 100vh;
+        height: auto;
+      }
+    }
+  }
+}
+
+.container__main__right {
+  width: 85vw;
+}
+
+.rightrecolhidoFull {
+  .mainside {
+    width: 83vw;
+  }
+  .rightside {
+    margin-right: -23vw;
+    .closed {
+      img {
+        transform: rotate(180deg);
+        left: -18px;
+      }
+    }
+  }
+}
+
+.leftAberto {
+  .leftside {
+    margin-left: 0;
+  }
+  .rightside {
+    margin-right: -47vw;
+    .closed {
+      img {
+        transform: rotate(180deg);
+        left: -18px;
+      }
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .rightside {
+      display: none;
+    }
+    .leftside {
+      width: 80vw;
+    } 
+  }
+}
+
+.rightAberto {
+  .leftside {
+    margin-left: -47vw;
+    .closed {
+      img {
+        transform: rotate(0deg);
+        left: 8px;
+      }
+    }
+  }
+  .rightside {
+    margin-right: 0;
+    .closed {
+      img {
+        transform: rotate(0deg);
+        left: 8px;
+      }
+    }
+  }
+}
+
+.twoSides {
+  .rightside {
+    margin-right: -47vw;
+    .closed {
+      img {
+        transform: rotate(180deg);
+        left: -18px;
+      }
+    }
+  }
+  .leftside {
+    margin-left: -47vw;
+    .closed {
+      img {
+        transform: rotate(0deg);
+        left: 8px;
+      }
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .leftside {
+      margin-left: -44vw;
+    }
+  }
+}

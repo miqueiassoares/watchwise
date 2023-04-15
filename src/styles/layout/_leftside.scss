@@ -2,14 +2,16 @@
 
 .leftside {
   background-color: variables.$bg-dark-sides;
-  position: fixed;
-  top: 0;
-  left: 0;  
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  padding-top: 2rem;
+  gap: 5rem;
+  overflow-y: auto;
   border-right: .2vw solid rgba(249, 249, 249, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
   @media screen and (max-width: 800px) {
     gap: 5vw;
   }
@@ -21,7 +23,7 @@
     min-height: 100vh;
     height: 100%;
     width: .3vw;
-    min-width: 5px;
+    min-width: 8px;
     border: none;
     padding: 0;
     display: none;
@@ -133,3 +135,8 @@
   }
 }
 
+.container__navigate {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}

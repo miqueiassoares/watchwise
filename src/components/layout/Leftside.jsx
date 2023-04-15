@@ -8,18 +8,20 @@ const Leftside = ({ handleClosed }) => {
       <div className="leftside__logo">
         <img src={logo} alt="WatchWise" />
       </div>
-      <Navigation 
-        title="Menu"
-        itens={["Home", "Discover", "Award", "Celebrities"]}
-      />
-      <Navigation 
-        title="Library"
-        itens={["Recent", "Top Rated", "Downloaded", "Playlists", "Watchlist", "Completed"]}
-      />
-      <Navigation 
-        title="General"
-        itens={["Settings", "Log Out"]}
-      />
+      <div className="container__navigate">
+        <Navigation
+          title="Menu"
+          itens={["Home", "Discover", "Award", "Celebrities"]}
+        />
+        <Navigation
+          title="Library"
+          itens={["Recent", "Top Rated", "Downloaded", "Playlists", "Watchlist", "Completed"]}
+        />
+        <Navigation
+          title="General"
+          itens={["Settings", "Log Out"]}
+        />
+      </div>
     <button onClick={handleClosed} className="closed">
         <img src={Arrow} alt="Open/Closed" />
       </button>

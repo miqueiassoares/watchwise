@@ -80,8 +80,13 @@ const App = () => {
   return (
     <div className={`App ${className}`}>
       <Leftside handleClosed={setLeftSide} />
-      <Mainside handleOnClick={clickMain} />
-      <Rightside handleClosed={setRightSide} />
+      <div className="container__main__right">
+
+        <Mainside handleOnClick={clickMain} />
+
+        <Rightside handleClosed={setRightSide} />
+        
+      </div>
     </div>
   );
 };
