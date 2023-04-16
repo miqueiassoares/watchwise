@@ -13,16 +13,6 @@ const TvShows = () => {
           <div className="movie"></div>
           <div className="movie"></div>
         </div>
-        <div className="container__movie">
-          <div className="movie"></div>
-          <div className="movie"></div>
-          <div className="movie"></div>
-        </div>
-        <div className="container__movie">
-          <div className="movie"></div>
-          <div className="movie"></div>
-          <div className="movie"></div>
-        </div>
       </div>
     </main>
   );
