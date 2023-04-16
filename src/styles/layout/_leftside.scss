@@ -5,8 +5,8 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  padding-top: 2rem;
-  gap: 3vw;
+  padding-top: 2vw;
+  gap: 2vw;
   overflow-y: auto;
   border-right: .2vw solid rgba(249, 249, 249, 0.1);
   position: fixed;
@@ -137,7 +137,11 @@
 }
 
 .container__navigate {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 2vw;
+  justify-content: space-around;
+  @media screen and (max-height: 800px) {
+    height: auto;
+  }
 }

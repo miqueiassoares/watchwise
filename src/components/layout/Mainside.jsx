@@ -7,7 +7,7 @@ const Mainside = ({ handleOnClick }) => {
   return(
     <div className="mainside" onClick={handleOnClick}>
       <Routes>
-        <Route  path={"/home"} element={<Home/>} />
+        <Route path={"/home"} element={<Home/>} />
       </Routes>
     </div>
   );

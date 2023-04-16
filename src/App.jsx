@@ -28,7 +28,7 @@ const App = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (pathname === "/") {
+    if (pathname === "/" || pathname === "/home") {
       navigate("/home");
     }
   }, [pathname]);

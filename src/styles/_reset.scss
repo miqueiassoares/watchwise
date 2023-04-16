@@ -65,3 +65,7 @@ table {
 ::-webkit-scrollbar-thumb:active {
   background-color: variables.$blue-color;
 }
+
+img {
+	pointer-events: none;
+}
