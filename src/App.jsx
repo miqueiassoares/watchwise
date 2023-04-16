@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
 
 import Leftside from "./components/layout/Leftside";
 import Mainside from "./components/layout/Mainside";
@@ -24,14 +23,6 @@ const App = () => {
   const [leftSide, setLeftSide] = useClosedOpen();
   const [className, setClassName] = useState("");
   const [width, setWidth] = useState(window.innerWidth);
-  const pathname = useLocation().pathname;
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (pathname === "/" || pathname === "/home") {
-      navigate("/home");
-    }
-  }, [pathname]);
 
   useEffect(() => {
     const handleResize = () => setWidth(window.innerWidth);

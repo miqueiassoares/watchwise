@@ -1,6 +1,7 @@
 @use "../variables";
 
 .leftside {
+  direction: rtl;
   background-color: variables.$bg-dark-sides;
   height: 100vh;
   display: flex;
@@ -62,6 +63,7 @@
     }
   }
   &__navigation {
+    direction: ltr;
     margin: 0px;
     width: 100%;
     h1 {
