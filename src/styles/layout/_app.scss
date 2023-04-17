@@ -1,8 +1,5 @@
 @use "../variables";
 
-
-
-
 .App {
   width: auto;
   height: auto;
@@ -53,6 +50,15 @@
 .rightrecolhidoFull {
   .mainside {
     width: 83vw;
+    .home {
+      &__tvshows {
+        &__slider {
+          .slides {
+            height: 35vw;
+          }
+        }
+      }
+    }
   }
   .rightside {
     margin-right: -23vw;

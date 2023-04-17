@@ -132,9 +132,54 @@
   &__tvshows {
     width: 100%;
     &__slider {
-      background-color: azure;
       width: 100%;
-      height: 21em;
+      height: auto;
+      position: relative;
+      overflow: hidden;
+      
+      .slides {
+        transition: .3s;
+        height: 25vw;
+        display: flex;
+        width: 300%;
+
+        .slide {
+          position: relative;
+          width: 33.33333333333333%;
+          height: 100%;
+          img {
+            border-radius: 2vw;
+            width: 100%;
+            height: 100%;
+          }
+        }
+        #slide1 {
+          transition: margin .3s;
+        }
+      }
+
+      & .img1 > #slide1 {
+        margin-left: 0;
+      }
+      & .img2 > #slide1 {
+        margin-left: -33.33333333333333%;
+      }
+      & .img3 > #slide1 {
+        margin-left: -66.66666666666667%;
+      }
+      .manual-navigation {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 2vw;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        button {
+          border: none;
+        }
+      }
     }
     &__popularmovies {
       margin-top: 2vw;
