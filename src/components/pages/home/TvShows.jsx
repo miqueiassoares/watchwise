@@ -1,6 +1,8 @@
 import theCrown from "../../../assets/img/mainside/home/tvshows/thecrown.png";
 import suits from "../../../assets/img/mainside/home/tvshows/suits.png";
 import tbbt from "../../../assets/img/mainside/home/tvshows/tbbt.png";
+import arrow from "../../../assets/img/rightside/arrow-white.svg";
+
 import { useState } from "react";
 import { useEffect } from "react";
 
@@ -27,14 +29,49 @@ const TvShows = () => {
 
   useEffect(()=> {
     setClassImg(`img${count}`)
-  }, [count])
-
-
-
+  }, [count]);
 
   return(
     <main className="home__tvshows">
       <div className="home__tvshows__slider">
+
+        <h1>
+          {
+            classImg === "img1" ? "The Crown" : classImg === "img2" ? "The Big Bang Theory" : "Suits"
+          }
+        </h1>
+
+        <div className="buttons-navigation">
+          <button 
+            onClick={() => {
+              setCount(prevState => {
+                if(prevState === 1) {
+                  return 3;
+                } else {
+                  return prevState - 1;
+                }
+              });
+            }} 
+            className="arrow-left"
+            >
+            <img src={arrow} alt="Left" />
+          </button>
+
+          <button 
+            onClick={() => {
+              setCount(prevState => {
+                if(prevState === 3) {
+                  return 1;
+                } else {
+                  return prevState + 1;
+                }
+              });
+            }}
+            className="arrow-right"
+            >
+            <img src={arrow} alt="right" />
+          </button>
+        </div>
 
         <div className={`slides ${classImg}`}>
           <div className="slide" id="slide1">
@@ -49,9 +86,11 @@ const TvShows = () => {
         </div>
 
         <div className="manual-navigation">
-          <button id="img1" onClick={() => setClassImg("img1")}></button>
-          <button id="img2" onClick={() => setClassImg("img2")}></button>
-          <button id="img3" onClick={() => setClassImg("img3")}></button>
+          <div>
+            <button className={classImg === "img1" ? "marcado" : ""} id="img1" onClick={() => setClassImg("img1")}></button>
+            <button className={classImg === "img2" ? "marcado" : ""} id="img2" onClick={() => setClassImg("img2")}></button>
+            <button className={classImg === "img3" ? "marcado" : ""} id="img3" onClick={() => setClassImg("img3")}></button>
+          </div>
         </div>
 
 

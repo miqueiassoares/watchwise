@@ -137,6 +137,50 @@
       position: relative;
       overflow: hidden;
       
+      h1 {
+        color: #f9f9f9;
+        font-weight: 800;
+        position: absolute;
+        z-index: 1;
+        top: 3vw;
+        left: 3vw;
+        font-size: 4vw;
+      }
+
+      .buttons-navigation {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-right: 2vw;
+        top: 50%;
+        padding-left: 2vw;
+        z-index: 1;
+        button {
+          background: rgba(249, 249, 249, 0.2);
+          backdrop-filter: blur(4.40759px);
+          border: none; 
+          padding: 1vw 1.2vw;
+          border-radius: 1vw;
+          cursor: pointer;
+          transition: .3s;
+          img {
+            height: 1vw;
+            width: auto;
+          }
+          &:hover {
+            background-color: #21242D;
+            opacity: .7;
+          }
+        }
+        .arrow-left {
+          img {
+            rotate: 180deg;
+          }
+        }
+      }
+
       .slides {
         transition: .3s;
         height: 25vw;
@@ -153,6 +197,9 @@
             height: 100%;
           }
         }
+        .slide:not(:first-child) {
+          opacity: .7;
+        }
         #slide1 {
           transition: margin .3s;
         }
@@ -167,19 +214,36 @@
       & .img3 > #slide1 {
         margin-left: -66.66666666666667%;
       }
+
       .manual-navigation {
         width: 100%;
-        display: flex;
-        flex-direction: row;
-        gap: 2vw;
-        justify-content: center;
         position: absolute;
-        bottom: 0;
+        bottom: 2vw;
         z-index: 1;
-        button {
-          border: none;
+        div {
+          width: max-content;
+          display: flex;
+          flex-direction: row;
+          gap: 1vw;
+          margin: auto;
+          background: rgba(249, 249, 249, 0.2);
+          backdrop-filter: blur(4.40759px);
+          padding: .4vw;
+          border-radius: .4vw;
+          button {
+            cursor: pointer;
+            background-color: variables.$text-color;
+            border-radius: 50%;
+            height: .655555555vw;
+            width: .5vw;
+            border: none;
+          }
+          .marcado {
+            background-color: variables.$blue-color;
+          }
         }
       }
+      
     }
     &__popularmovies {
       margin-top: 2vw;
