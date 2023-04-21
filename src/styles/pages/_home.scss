@@ -367,6 +367,7 @@
       }
       .container__movie {
         width: 100%;
+        padding-right: 4vw;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -377,12 +378,14 @@
           flex-wrap: wrap;
           margin-top: 3rem;
           gap: 3rem;
+          padding-right: 0rem;
           .movie {
             margin: auto;
           }
         }
         .movie {
           width: auto;
+          min-width: 33.3333333%;
           height: auto;
           position: relative;
           img {
