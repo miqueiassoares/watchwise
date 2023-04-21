@@ -1,18 +1,35 @@
+import { useState } from "react";
 import ArrowWhite from "../../../assets/img/rightside/arrow-white.svg";
 import desenho from "../../../assets/img/rightside/filmes/Desenho.png";
 import WandaVision from "../../../assets/img/rightside/filmes/WandaVision.png";
 
 
 const Continue = () => {
+
+  const [avancar, setAvancar] = useState(false);
+
   return(
     <div className="continue">
+
       <div className="continue__controls">
         <h2 className="continue__controls__title">Continue</h2>
-        <div className="continue__controls__avancar__recuar">
-          <button className="lado-esquerdo">
-            <img src={ArrowWhite} alt="left" />
+        <div className={`continue__controls__avancar__recuar ${avancar ? "ativado" : ""}`}
+          >
+          <button 
+            className="lado-esquerdo"
+            onClick={() => {
+              setAvancar(false);
+            }}
+            >
+
+            <img src={ArrowWhite} alt="left"/>
           </button>
-          <button className="lado-direito">
+          <button 
+            className="lado-direito"
+            onClick={() => {
+              setAvancar(true);
+            }}
+            >
             <img src={ArrowWhite} alt="left" />
           </button>
         </div>
@@ -21,15 +38,23 @@ const Continue = () => {
           <img src={ArrowWhite} alt="See More" />
         </div>
       </div>
+
       <div className="continue__movies">
-        <div className="continue__movies__movie">
+
+        <div className="continue__movies__movie right-movie" id={avancar ? "avancar" : ""} >
+
           <img src={WandaVision} alt="WandaVision" />
+
           <div className="info">
+
             <h3>WandaVision</h3>
+
             <p>1 Episode left</p>
+
             <div className="progresse-bar">
               <span></span>
             </div>
+
           </div>
           <button className="drop">Drop</button>
           <button className="watch">Watch</button>
