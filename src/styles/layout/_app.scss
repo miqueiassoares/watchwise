@@ -51,10 +51,13 @@
   .mainside {
     width: 83vw;
     .home {
+      header {
+        margin-bottom: 1vw;
+      }
       &__tvshows {
         &__slider {
           .slides {
-            height: 35vw;
+            height: 37.5vw;
           }
         }
       }
