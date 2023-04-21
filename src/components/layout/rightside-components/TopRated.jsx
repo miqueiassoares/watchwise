@@ -2,7 +2,7 @@ import supernatural from "../../../assets/img/rightside/filmes/supernatural.png"
 import rickandmorty from "../../../assets/img/rightside/filmes/rickandmorty.png";
 
 import ArrowWhite from "../../../assets/img/rightside/arrow-white.svg";
-import Add from "../../../assets/img/rightside/Add-icon.png"
+import plus from "../../../assets/img/mainside/home/plus.png";
 import { useState } from "react";
 
 const TopRated = () => {
@@ -45,7 +45,7 @@ const TopRated = () => {
           </div>
           <div className="buttons">
             <button className="add">
-              <img src={Add} alt="Add" />
+              <img src={plus} alt="Add" />
             </button>
             <button className="watch">
               Watch
@@ -63,7 +63,7 @@ const TopRated = () => {
 
           <div className="buttons">
             <button className="add">
-              <img src={Add} alt="Add" />
+              <img src={plus} alt="Add" />
             </button>
             
             <button className="watch">

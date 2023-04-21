@@ -284,12 +284,18 @@
             }
           }
         }
+        button {
+          transition: opacity .3s;
+        }
+        button:hover {
+          opacity: .5;
+        }
         .drop {
           padding: .7vw .8vw;
           background: rgba(249, 249, 249, 0.2);
           border-radius: .5vw;
           color: #f9f9f9;
-          font-size: .75vw;
+          font-size: 1vw;
           font-weight: 800;
           border: none;
           cursor: pointer;
@@ -304,7 +310,7 @@
           
           border: none;
           color: #16181e;
-          font-size: .75vw;
+          font-size: 1vw;
           font-weight: 800;
           @media screen and (max-width: 800px) {
             font-size: 1rem;
@@ -386,20 +392,11 @@
         position: absolute;
         bottom: 0;
         padding: 0 1vw 1vw;
-        button {
-          border: none;
-          cursor: pointer;
-          transition: .3s;
-          border-radius: .4vw;
-          &:hover {
-            opacity: .5;
-          }
-        }
         .add {
-          padding: .2vw .8vw;
+          padding: .6vw 1vw;
           background-color: rgba(249, 249, 249, 0.2);
           img {
-            width: 3vw;
+            width: 1.5vw;
             min-width: 30px;
           }
         }
@@ -407,11 +404,20 @@
           background-color: #00b9ae;
           padding: .4vw 3vw;
           font-weight: bold;
-          font-size: .8vw;
+          font-size: 1vw;
           width: 100%;
           @media screen and (max-width: 800px) {
             padding: .5rem 2rem;
             font-size: .8rem;
+          }
+        }
+        button {
+          border: none;
+          cursor: pointer;
+          transition: .3s;
+          border-radius: .4vw;
+          &:hover {
+            opacity: .5;
           }
         }
       }
